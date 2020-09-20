@@ -19,7 +19,7 @@ export class EmployeesService {
     }
 
     async updateEmployee(employeeId: string, employeeData: Employee) {
-        return await this.employeeModel.findByIdAndUpdate(employeeId, employeeData)
+        return await this.employeeModel.findByIdAndUpdate(employeeId, employeeData , {new: true})
     }
 
     async deleteEmployee(employeeId: string) {

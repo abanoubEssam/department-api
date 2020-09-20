@@ -18,7 +18,7 @@ export class DepartmentsService {
     }
 
     async updateDepartment(departmentId: string, departmentData: Department) {
-        return await this.departmentModel.findByIdAndUpdate(departmentId, departmentData)
+        return await this.departmentModel.findByIdAndUpdate(departmentId, departmentData, { new: true })
     }
 
     async deleteDepartment(departmentId: string) {
